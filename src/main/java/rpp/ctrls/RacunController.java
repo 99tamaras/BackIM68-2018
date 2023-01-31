@@ -45,7 +45,7 @@ public class RacunController {
 	        }
 	    }
 	    
-	    //Adds new Racun to database
+	    
 	    
 	    @PostMapping("racun")
 	    public ResponseEntity<Racun> addRacun(@RequestBody Racun racun) {
@@ -54,7 +54,7 @@ public class RacunController {
 	        return ResponseEntity.created(location).body(savedRacun);
 	    }
 	    
-	    //"Updates Porudzbina that has id that was forwarded as path variable with values forwarded in Request Body."
+
 	    
 	    @PutMapping(value = "racun/{id}")
 	    public ResponseEntity<Racun> updateRacun(@RequestBody Racun racun,
@@ -68,16 +68,15 @@ public class RacunController {
 	    }
 	    
 	    
-	    //value = "Deletes Porudzbina with id that was forwarded as path variable.")
+	    
 	    
 	    @DeleteMapping("racun/{id}")
 	    public ResponseEntity<HttpStatus> delete(@PathVariable Integer id) {
 	        if (id == -100 && !racunService.existsById(-100)) {
 
 	            jdbcTemplate.execute("INSERT INTO racun "
-	            		+ "(\"datum\", \"id\", \"nacinPlacanja\", \"stavkaRacunas\") "
-	            		+ "VALUES ('29.03.2021.',"
-	            		+ "'-100', 'kartica', '1000', ");
+	            		+ "(\"id\",\"datum\",  \"nacin_placanja\") "
+	            		+ "VALUES (-100,'29.03.2021.', 'kartica' )");
 	        }
 
 	        if (racunService.existsById(id)) {

@@ -22,13 +22,13 @@ public class StavkaRacuna implements Serializable {
 
 	private BigDecimal cena;
 
-	@Column(name="jedinica_mere")
+	@Column(name="jedinica_mere") 
 	private String jedinicaMere;
 
 	private BigDecimal kolicina;
 
 	@Column(name="redni_broj")
-	private Integer redniBroj;
+	private Integer redni_broj;
 
 	//bi-directional many-to-one association to Proizvod
 	@ManyToOne
@@ -75,12 +75,12 @@ public class StavkaRacuna implements Serializable {
 		this.kolicina = kolicina;
 	}
 
-	public Integer getRedniBroj() {
-		return this.redniBroj;
+	public Integer getRedni_broj() {
+		return this.redni_broj;
 	}
 
-	public void setRedniBroj(Integer redniBroj) {
-		this.redniBroj = redniBroj;
+	public void setRedni_broj(Integer redni_broj) {
+		this.redni_broj = redni_broj;
 	}
 
 	public Proizvod getProizvod() {

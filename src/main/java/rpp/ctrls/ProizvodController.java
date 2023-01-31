@@ -58,7 +58,7 @@ public class ProizvodController {
 	        
 	    }
 	
-// "Adds new Artikl to database.")
+
 	 @PostMapping("proizvod")
 	    public ResponseEntity<Proizvod> addProizvod(@RequestBody Proizvod proizvod) {
 	        Proizvod savedProizvod = proizvodService.save(proizvod);
@@ -80,7 +80,7 @@ public class ProizvodController {
 	    public ResponseEntity<HttpStatus> delete(@PathVariable Integer id) {
 	        if (id == -100 && !proizvodService.existsById(id)) {
 	            jdbcTemplate.execute(
-	            		 "INSERT INTO artikl (\"id\", \"naziv\", \"proizvodjac\") VALUES (-100, 'Test naziv', 'Test proizvodjac')");
+	            		 "INSERT INTO proizvod (\"id\", \"naziv\", \"proizvodjac\") VALUES (-100, 'Test naziv', 'Test proizvodjac')");
 	        }
 
 	        if (proizvodService.existsById(id)) {

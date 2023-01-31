@@ -77,7 +77,7 @@ public class ProizvodjacController {
 
 	        if (id == -100 && !proizvodjacService.existsById(id)) {
 	            jdbcTemplate.execute(
-	                    "INSERT INTO proizvodjac (\"id\", \"adresa\", \"kontakt\", \"naziv\") VALUES (-100, 'Test adresa', 'Test kontakt', 'Test naziv')");
+	                    "INSERT INTO proizvodjac (\"id\", \"naziv\", \"adresa\", \"kontakt\") VALUES (-100, 'Test naziv', 'Test adresa', 'Test kontakt', 'Test naziv')");
 	        }
 
 	        if (proizvodjacService.existsById(id)) {

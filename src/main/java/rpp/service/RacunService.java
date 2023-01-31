@@ -22,11 +22,7 @@ public class RacunService {
 	public Optional<Racun> findById(Integer id) {
 		return racunRepository.findById(id);
 	}
-	/*
-	public List<Racun> findById() {
-        return racunRepository.findById();
-    }
-	*/
+	
 	public Racun save(Racun racun) {
 		return racunRepository.save(racun);
 	}
