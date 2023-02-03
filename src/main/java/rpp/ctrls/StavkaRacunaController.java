@@ -80,7 +80,7 @@ public class StavkaRacunaController {
 	        if (!racunService.existsById(stavkaRacuna.getRacun().getId())) {
 	            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 	        }
-	        stavkaRacuna.setRedni_broj(stavkaRacunaService.nextRBr(stavkaRacuna.getRacun().getId()));
+	        stavkaRacuna.setRedniBroj(stavkaRacunaService.nextRBr(stavkaRacuna.getRacun().getId()));
 	        StavkaRacuna savedStavkaRacuna = stavkaRacunaService.save(stavkaRacuna);
 	        URI location = URI.create("/stavkaRacuna/" + savedStavkaRacuna.getId());
 	        return ResponseEntity.created(location).body(savedStavkaRacuna);

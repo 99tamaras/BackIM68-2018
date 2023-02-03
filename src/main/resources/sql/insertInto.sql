@@ -7,14 +7,14 @@ VALUES(nextval('proizvodjac3_seq'), 'Fruit D.O.O.', 'Justina Popovica 3, 11080 Z
 INSERT INTO "proizvodjac"("id", "naziv", "adresa", "kontakt")
 VALUES(nextval('proizvodjac3_seq'), 'CENTROPROIZVOD', 'DOBANOVACKI PUT B.B. 11271, SURCIN', '+381 11 3773 600');
 
-INSERT INTO "racun"("id", "datum")
-VALUES(nextval('racun3_seq'), to_date('01.03.2017.', 'dd.mm.yyyy.'));
-INSERT INTO "racun"("id", "datum")
-VALUES(nextval('racun3_seq'), to_date('06.03.2017.', 'dd.mm.yyyy.'));
-INSERT INTO "racun"("id", "datum")
-VALUES(nextval('racun3_seq'), to_date('08.03.2017.', 'dd.mm.yyyy.'));
-INSERT INTO "racun"("id", "datum")
-VALUES(nextval('racun3_seq'), to_date('07.03.2017.', 'dd.mm.yyyy.'));
+INSERT INTO "racun"("id", "datum", "nacin_placanja")
+VALUES(nextval('racun3_seq'), to_date('01.03.2017.', 'dd.mm.yyyy.'), 'kartica');
+INSERT INTO "racun"("id", "datum", "nacin_placanja")
+VALUES(nextval('racun3_seq'), to_date('06.03.2017.', 'dd.mm.yyyy.'), 'kartica');
+INSERT INTO "racun"("id", "datum", "nacin_placanja")
+VALUES(nextval('racun3_seq'), to_date('08.03.2017.', 'dd.mm.yyyy.'), 'kes');
+INSERT INTO "racun"("id", "datum", "nacin_placanja")
+VALUES(nextval('racun3_seq'), to_date('07.03.2017.', 'dd.mm.yyyy.'), 'kes');
 
 
 
